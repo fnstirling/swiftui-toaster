@@ -6,11 +6,23 @@ struct DemoView: View {
   
   var body: some View {
     VStack {
-      Spacer()
-      Text("Tap the button to create a toast")
+      Text("Toaster Demo")
+        .font(.headline)
         .padding()
       Spacer()
       VStack(spacing: 5) {
+        DemoButton(text: "Delete Youngest Toast", backgroundColor: .red) {
+          if toaster.toasts.count > 0 {
+            toaster.toasts.removeFirst()
+          }
+        }
+        
+        DemoButton(text: "Delete Oldest Toast", backgroundColor: .red) {
+          if toaster.toasts.count > 0 {
+           toaster.toasts.removeLast()
+          }
+        }.padding(.bottom, 25)
+        
         DemoButton(text: "Create Danger Toast", backgroundColor: .red) {
           toaster.addToast(
             toast: Toast(
