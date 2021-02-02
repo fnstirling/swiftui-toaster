@@ -15,18 +15,18 @@ final class Toast {
     self.text = text
     self.intent = intent
     switch intent {
-    case .success:
-      self.color = .green
-      self.symbol = .check
-    case .error:
-      self.color = .red
-      self.symbol = .xmark
-    case .warning:
-      self.color = .orange
-      self.symbol = .exclamation
     case .notify:
       self.color = Color(UIColor.systemGray)
-      self.symbol = .bell
+      self.symbol = .notify
+    case .danger:
+      self.color = .red
+      self.symbol = .danger
+    case .warning:
+      self.color = .orange
+      self.symbol = .warning
+    case .success:
+      self.color = .green
+      self.symbol = .success
     }
   }
   
@@ -44,17 +44,17 @@ final class Toast {
   }
   
   public enum Intent: String {
-    case success
     case notify
-    case error
+    case danger
     case warning
+    case success
   }
   
   public enum Symbol: String {
-    case check = "checkmark.circle.fill"
-    case exclamation = "exclamationmark.triangle.fill"
-    case xmark = "xmark.circle.fill"
-    case bell = "bell.circle.fill"
+    case notify = "bell.circle.fill"
+    case danger = "xmark.circle.fill"
+    case warning = "exclamationmark.triangle.fill"
+    case success = "checkmark.circle.fill"
   }
 }
 

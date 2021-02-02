@@ -2,12 +2,12 @@ import SwiftUI
 
 @main
 struct Application: App {
-  @StateObject var toastStore = Toaster()
+  @StateObject var toaster = Toaster()
   
   var body: some Scene {
     WindowGroup {
       DemoView()
-        .environmentObject(toastStore)
+        .environmentObject(toaster)
     }
   }
 }
