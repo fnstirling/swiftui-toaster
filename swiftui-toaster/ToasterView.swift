@@ -19,6 +19,7 @@ struct ToasterView: View {
           ToastView(
             text: toast.text,
             symbolName: toast.symbolName,
+            symbolColor: toast.symbolColor,
             removal: { toaster.removeToast(toastID: toast.id) }
           )
           .offset(x: 0, y: 0)
