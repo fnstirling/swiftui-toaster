@@ -26,8 +26,9 @@ struct ToastView: View {
             .aspectRatio(contentMode: .fill)
             .frame(width: symbolWidth, height: symbolWidth)
             .foregroundColor(symbolColor)
+          
           Text(text)
-            .font(.system(size: 16, weight: .medium))
+            .font(.system(size: 16, weight: .semibold))
             .frame(width: geometry.size.width - nonTextWidth, height: toastHeight, alignment: .leading)
             .padding(.leading, textLeadingPadding)
             .lineLimit(2)
