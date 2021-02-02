@@ -10,5 +10,5 @@ public struct ToastConfiguration: ToastConfigurable {
   public static var notifySymbolColor: Color = Color(UIColor.systemGray)
   public static var dangerSymbolColor: Color = .red
   public static var warningSymbolColor: Color = .orange
-  public static var successSymbolColor: Color = .red
+  public static var successSymbolColor: Color = .green
 }

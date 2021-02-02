@@ -10,7 +10,7 @@ struct ToastView: View {
   // MARK: Default Properties
   var verticalSpacing: CGFloat = 15
   var singleHorizontalSpacing: CGFloat = 40
-  var symbolWidth: CGFloat = 25
+  var symbolWidth: CGFloat = 22
   var textLeadingPadding: CGFloat = 10
   var nonTextWidth: CGFloat { (singleHorizontalSpacing * 2) + symbolWidth } // Multipled by 3 for 1 x symbol space and 2 x edge spacings
   var toastHeight: CGFloat = 60
