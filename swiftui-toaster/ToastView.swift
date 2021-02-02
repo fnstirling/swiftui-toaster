@@ -6,7 +6,7 @@ struct ToastView: View {
   var symbolName: String
   var symbolColor: Color
   var removal: () -> Void
-  var work: DispatchWorkItem? // Store the dispatch work item to be cancelled if tapped
+  var work: DispatchWorkItem? // Store the removal in a work item so can be cancelled if tapped to remove
   
   // MARK: Default Properties
   var verticalSpacing: CGFloat = 15
@@ -17,6 +17,7 @@ struct ToastView: View {
   var toastHeight: CGFloat = 60
   var duration: Int = 3000
   
+  // MARK: Initializers
   init(
     text: String,
     symbolName: String,
@@ -34,6 +35,7 @@ struct ToastView: View {
     }
   }
   
+  // MARK: Body
   var body: some View {
     GeometryReader { geometry in
       HStack {
@@ -62,9 +64,10 @@ struct ToastView: View {
       }
     }
     .frame(height: toastHeight, alignment: .top)
-    // .onAppear {
-    //   DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(3000)) { removal() }
-    // }
+    .onTapGesture {
+      work?.cancel()
+      removal()
+    }
   }
 }
 
