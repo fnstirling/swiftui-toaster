@@ -10,8 +10,35 @@ struct DemoView: View {
       Text("Tap the button to create a toast")
         .padding()
       Spacer()
-      Button(
-        action: {
+      VStack(spacing: 5) {
+        DemoButton(text: "Create Danger Toast", backgroundColor: .red) {
+          toaster.addToast(
+            toast: Toast(
+              text: "Toast \(toaster.toasts.count)",
+              intent: .danger
+            )
+          )
+        }
+        
+        DemoButton(text: "Create Warning Toast", backgroundColor: .orange) {
+          toaster.addToast(
+            toast: Toast(
+              text: "Toast \(toaster.toasts.count)",
+              intent: .warning
+            )
+          )
+        }
+        
+        DemoButton(text: "Create Success Toast", backgroundColor: .green) {
+          toaster.addToast(
+            toast: Toast(
+              text: "Toast \(toaster.toasts.count)",
+              intent: .success
+            )
+          )
+        }
+        
+        DemoButton(text: "Create Notify Toast", backgroundColor: .blue) {
           toaster.addToast(
             toast: Toast(
               text: "Toast \(toaster.toasts.count)",
@@ -19,24 +46,34 @@ struct DemoView: View {
             )
           )
         }
-      ) {
-        HStack {
-          Spacer()
-          Text("Create Toast")
-            .font(.system(size: 15))
-            .fontWeight(.semibold)
-            .foregroundColor(.white)
-          Spacer()
-        }
-        .frame(height: 50, alignment: .center)
-        .background(Color.blue)
-        .opacity(disabled ? 0.5 : 1.0)
-        .cornerRadius(10)
       }
-      .disabled(disabled)
-      .padding(.horizontal, 20)
     }
     .overlay(ToasterView())
+  }
+}
+
+struct DemoButton: View {
+  let text: String
+  let backgroundColor: Color
+  let action: () -> Void
+  
+  var body: some View {
+    Button(
+      action: action
+    ) {
+      HStack {
+        Spacer()
+        Text(text)
+          .font(.system(size: 15))
+          .fontWeight(.semibold)
+          .foregroundColor(.white)
+        Spacer()
+      }
+      .frame(height: 50, alignment: .center)
+      .background(backgroundColor)
+      .cornerRadius(10)
+    }
+    .padding(.horizontal, 20)
   }
 }
 
