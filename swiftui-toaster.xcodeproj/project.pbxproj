@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC113C9825C7E78800AE4691 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113C9725C7E78800AE4691 /* Application.swift */; };
+		EC113C9A25C7E78800AE4691 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113C9925C7E78800AE4691 /* DemoView.swift */; };
+		EC113C9C25C7E78C00AE4691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC113C9B25C7E78C00AE4691 /* Assets.xcassets */; };
+		EC113C9F25C7E78C00AE4691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC113C9E25C7E78C00AE4691 /* Preview Assets.xcassets */; };
+		EC113CAA25C7E78C00AE4691 /* swiftui_toasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CA925C7E78C00AE4691 /* swiftui_toasterTests.swift */; };
+		EC113CB525C7E78C00AE4691 /* swiftui_toasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CB425C7E78C00AE4691 /* swiftui_toasterUITests.swift */; };
+		EC113CCE25C8977E00AE4691 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CCD25C8977E00AE4691 /* Toast.swift */; };
+		EC113CDC25C8C94900AE4691 /* Toaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CDB25C8C94900AE4691 /* Toaster.swift */; };
+		EC113CE425C8CD2600AE4691 /* ToasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CE325C8CD2600AE4691 /* ToasterView.swift */; };
+		EC113CEC25C8E9A100AE4691 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CEB25C8E9A100AE4691 /* ToastView.swift */; };
+		EC113CFD25C9083100AE4691 /* AnyTransition+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CFC25C9083100AE4691 /* AnyTransition+Toast.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC113CA625C7E78C00AE4691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC113C8C25C7E78800AE4691 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC113C9325C7E78800AE4691;
+			remoteInfo = "swiftui-toaster";
+		};
+		EC113CB125C7E78C00AE4691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC113C8C25C7E78800AE4691 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC113C9325C7E78800AE4691;
+			remoteInfo = "swiftui-toaster";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC113C9425C7E78800AE4691 /* swiftui-toaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-toaster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC113C9725C7E78800AE4691 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		EC113C9925C7E78800AE4691 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		EC113C9B25C7E78C00AE4691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC113C9E25C7E78C00AE4691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC113CA025C7E78C00AE4691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC113CA525C7E78C00AE4691 /* swiftui-toasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-toasterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC113CA925C7E78C00AE4691 /* swiftui_toasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_toasterTests.swift; sourceTree = "<group>"; };
+		EC113CAB25C7E78C00AE4691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC113CB025C7E78C00AE4691 /* swiftui-toasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-toasterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC113CB425C7E78C00AE4691 /* swiftui_toasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_toasterUITests.swift; sourceTree = "<group>"; };
+		EC113CB625C7E78C00AE4691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC113CCD25C8977E00AE4691 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		EC113CDB25C8C94900AE4691 /* Toaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toaster.swift; sourceTree = "<group>"; };
+		EC113CE325C8CD2600AE4691 /* ToasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToasterView.swift; sourceTree = "<group>"; };
+		EC113CEB25C8E9A100AE4691 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		EC113CFC25C9083100AE4691 /* AnyTransition+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Toast.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC113C9125C7E78800AE4691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC113CA225C7E78C00AE4691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC113CAD25C7E78C00AE4691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC113C8B25C7E78800AE4691 = {
+			isa = PBXGroup;
+			children = (
+				EC113C9525C7E78800AE4691 /* Products */,
+				EC113C9625C7E78800AE4691 /* swiftui-toaster */,
+				EC113CA825C7E78C00AE4691 /* swiftui-toasterTests */,
+				EC113CB325C7E78C00AE4691 /* swiftui-toasterUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		EC113C9525C7E78800AE4691 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC113C9425C7E78800AE4691 /* swiftui-toaster.app */,
+				EC113CA525C7E78C00AE4691 /* swiftui-toasterTests.xctest */,
+				EC113CB025C7E78C00AE4691 /* swiftui-toasterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC113C9625C7E78800AE4691 /* swiftui-toaster */ = {
+			isa = PBXGroup;
+			children = (
+				EC113CA025C7E78C00AE4691 /* Info.plist */,
+				EC113C9725C7E78800AE4691 /* Application.swift */,
+				EC113C9925C7E78800AE4691 /* DemoView.swift */,
+				EC113CCD25C8977E00AE4691 /* Toast.swift */,
+				EC113CDB25C8C94900AE4691 /* Toaster.swift */,
+				EC113CE325C8CD2600AE4691 /* ToasterView.swift */,
+				EC113CEB25C8E9A100AE4691 /* ToastView.swift */,
+				EC113C9B25C7E78C00AE4691 /* Assets.xcassets */,
+				EC113C9D25C7E78C00AE4691 /* Preview Content */,
+				EC113CFC25C9083100AE4691 /* AnyTransition+Toast.swift */,
+			);
+			path = "swiftui-toaster";
+			sourceTree = "<group>";
+		};
+		EC113C9D25C7E78C00AE4691 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC113C9E25C7E78C00AE4691 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC113CA825C7E78C00AE4691 /* swiftui-toasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC113CA925C7E78C00AE4691 /* swiftui_toasterTests.swift */,
+				EC113CAB25C7E78C00AE4691 /* Info.plist */,
+			);
+			path = "swiftui-toasterTests";
+			sourceTree = "<group>";
+		};
+		EC113CB325C7E78C00AE4691 /* swiftui-toasterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC113CB425C7E78C00AE4691 /* swiftui_toasterUITests.swift */,
+				EC113CB625C7E78C00AE4691 /* Info.plist */,
+			);
+			path = "swiftui-toasterUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC113C9325C7E78800AE4691 /* swiftui-toaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC113CB925C7E78C00AE4691 /* Build configuration list for PBXNativeTarget "swiftui-toaster" */;
+			buildPhases = (
+				EC113C9025C7E78800AE4691 /* Sources */,
+				EC113C9125C7E78800AE4691 /* Frameworks */,
+				EC113C9225C7E78800AE4691 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swiftui-toaster";
+			productName = "swiftui-toaster";
+			productReference = EC113C9425C7E78800AE4691 /* swiftui-toaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC113CA425C7E78C00AE4691 /* swiftui-toasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC113CBC25C7E78C00AE4691 /* Build configuration list for PBXNativeTarget "swiftui-toasterTests" */;
+			buildPhases = (
+				EC113CA125C7E78C00AE4691 /* Sources */,
+				EC113CA225C7E78C00AE4691 /* Frameworks */,
+				EC113CA325C7E78C00AE4691 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC113CA725C7E78C00AE4691 /* PBXTargetDependency */,
+			);
+			name = "swiftui-toasterTests";
+			productName = "swiftui-toasterTests";
+			productReference = EC113CA525C7E78C00AE4691 /* swiftui-toasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC113CAF25C7E78C00AE4691 /* swiftui-toasterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC113CBF25C7E78C00AE4691 /* Build configuration list for PBXNativeTarget "swiftui-toasterUITests" */;
+			buildPhases = (
+				EC113CAC25C7E78C00AE4691 /* Sources */,
+				EC113CAD25C7E78C00AE4691 /* Frameworks */,
+				EC113CAE25C7E78C00AE4691 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC113CB225C7E78C00AE4691 /* PBXTargetDependency */,
+			);
+			name = "swiftui-toasterUITests";
+			productName = "swiftui-toasterUITests";
+			productReference = EC113CB025C7E78C00AE4691 /* swiftui-toasterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC113C8C25C7E78800AE4691 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					EC113C9325C7E78800AE4691 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					EC113CA425C7E78C00AE4691 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = EC113C9325C7E78800AE4691;
+					};
+					EC113CAF25C7E78C00AE4691 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = EC113C9325C7E78800AE4691;
+					};
+				};
+			};
+			buildConfigurationList = EC113C8F25C7E78800AE4691 /* Build configuration list for PBXProject "swiftui-toaster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC113C8B25C7E78800AE4691;
+			productRefGroup = EC113C9525C7E78800AE4691 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC113C9325C7E78800AE4691 /* swiftui-toaster */,
+				EC113CA425C7E78C00AE4691 /* swiftui-toasterTests */,
+				EC113CAF25C7E78C00AE4691 /* swiftui-toasterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC113C9225C7E78800AE4691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC113C9F25C7E78C00AE4691 /* Preview Assets.xcassets in Resources */,
+				EC113C9C25C7E78C00AE4691 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC113CA325C7E78C00AE4691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC113CAE25C7E78C00AE4691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC113C9025C7E78800AE4691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC113C9A25C7E78800AE4691 /* DemoView.swift in Sources */,
+				EC113CEC25C8E9A100AE4691 /* ToastView.swift in Sources */,
+				EC113CCE25C8977E00AE4691 /* Toast.swift in Sources */,
+				EC113CDC25C8C94900AE4691 /* Toaster.swift in Sources */,
+				EC113C9825C7E78800AE4691 /* Application.swift in Sources */,
+				EC113CFD25C9083100AE4691 /* AnyTransition+Toast.swift in Sources */,
+				EC113CE425C8CD2600AE4691 /* ToasterView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC113CA125C7E78C00AE4691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC113CAA25C7E78C00AE4691 /* swiftui_toasterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC113CAC25C7E78C00AE4691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC113CB525C7E78C00AE4691 /* swiftui_toasterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC113CA725C7E78C00AE4691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC113C9325C7E78800AE4691 /* swiftui-toaster */;
+			targetProxy = EC113CA625C7E78C00AE4691 /* PBXContainerItemProxy */;
+		};
+		EC113CB225C7E78C00AE4691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC113C9325C7E78800AE4691 /* swiftui-toaster */;
+			targetProxy = EC113CB125C7E78C00AE4691 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC113CB725C7E78C00AE4691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC113CB825C7E78C00AE4691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC113CBA25C7E78C00AE4691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"swiftui-toaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 97MPFD6ZAX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "swiftui-toaster/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stirlingandtaylor.swiftui-toaster";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC113CBB25C7E78C00AE4691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"swiftui-toaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 97MPFD6ZAX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "swiftui-toaster/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stirlingandtaylor.swiftui-toaster";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC113CBD25C7E78C00AE4691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97MPFD6ZAX;
+				INFOPLIST_FILE = "swiftui-toasterTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stirlingandtaylor.swiftui-toasterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swiftui-toaster.app/swiftui-toaster";
+			};
+			name = Debug;
+		};
+		EC113CBE25C7E78C00AE4691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97MPFD6ZAX;
+				INFOPLIST_FILE = "swiftui-toasterTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stirlingandtaylor.swiftui-toasterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swiftui-toaster.app/swiftui-toaster";
+			};
+			name = Release;
+		};
+		EC113CC025C7E78C00AE4691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97MPFD6ZAX;
+				INFOPLIST_FILE = "swiftui-toasterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stirlingandtaylor.swiftui-toasterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "swiftui-toaster";
+			};
+			name = Debug;
+		};
+		EC113CC125C7E78C00AE4691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97MPFD6ZAX;
+				INFOPLIST_FILE = "swiftui-toasterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stirlingandtaylor.swiftui-toasterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "swiftui-toaster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC113C8F25C7E78800AE4691 /* Build configuration list for PBXProject "swiftui-toaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC113CB725C7E78C00AE4691 /* Debug */,
+				EC113CB825C7E78C00AE4691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC113CB925C7E78C00AE4691 /* Build configuration list for PBXNativeTarget "swiftui-toaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC113CBA25C7E78C00AE4691 /* Debug */,
+				EC113CBB25C7E78C00AE4691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC113CBC25C7E78C00AE4691 /* Build configuration list for PBXNativeTarget "swiftui-toasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC113CBD25C7E78C00AE4691 /* Debug */,
+				EC113CBE25C7E78C00AE4691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC113CBF25C7E78C00AE4691 /* Build configuration list for PBXNativeTarget "swiftui-toasterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC113CC025C7E78C00AE4691 /* Debug */,
+				EC113CC125C7E78C00AE4691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC113C8C25C7E78800AE4691 /* Project object */;
+}
