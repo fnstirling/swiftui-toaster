@@ -6,6 +6,7 @@ struct ToastView: View {
   var symbolName: String
   var symbolColor: Color
   var removal: () -> Void
+  var work: DispatchWorkItem? // Store the dispatch work item to be cancelled if tapped
   
   // MARK: Default Properties
   var verticalSpacing: CGFloat = 15
@@ -14,6 +15,24 @@ struct ToastView: View {
   var textLeadingPadding: CGFloat = 10
   var nonTextWidth: CGFloat { (singleHorizontalSpacing * 2) + symbolWidth } // Multipled by 3 for 1 x symbol space and 2 x edge spacings
   var toastHeight: CGFloat = 60
+  var duration: Int = 3000
+  
+  init(
+    text: String,
+    symbolName: String,
+    symbolColor: Color,
+    removal: @escaping () -> Void
+  ) {
+    self.text = text
+    self.symbolName = symbolName
+    self.symbolColor = symbolColor
+    self.removal = removal
+    self.work = DispatchWorkItem(block: { removal() })
+    
+    if let work = work {
+      DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(duration), execute: work)
+    }
+  }
   
   var body: some View {
     GeometryReader { geometry in
@@ -36,16 +55,16 @@ struct ToastView: View {
           Spacer().frame(width: singleHorizontalSpacing, height: toastHeight)
         }
         .frame(width: geometry.size.width)
-
+        
         .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(12)
         .shadow(color: Color(UIColor.systemGroupedBackground), radius: 5, x: 0, y: 0)
       }
     }
     .frame(height: toastHeight, alignment: .top)
-    .onAppear {
-      DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(3000)) { removal() }
-    }
+    // .onAppear {
+    //   DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(3000)) { removal() }
+    // }
   }
 }
 

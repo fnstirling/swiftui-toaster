@@ -20,7 +20,7 @@ struct ToasterView: View {
             text: toast.text,
             symbolName: toast.symbolName,
             symbolColor: toast.symbolColor,
-            removal: { toaster.removeToast(toastID: toast.id) }
+            removal: { toaster.removeToast(toastID: toast.id);print("removing") }
           )
           .offset(x: 0, y: 0)
           .animation(animation)
