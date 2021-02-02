@@ -11,7 +11,14 @@ struct DemoView: View {
         .padding()
       Spacer()
       Button(
-        action: { toaster.addToast(toast: Toast(text: "Toast \(toaster.toasts.count)"))}
+        action: {
+          toaster.addToast(
+            toast: Toast(
+              text: "Toast \(toaster.toasts.count)",
+              intent: .notify
+            )
+          )
+        }
       ) {
         HStack {
           Spacer()
@@ -37,8 +44,8 @@ struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     let toaster = Toaster(
       toasts: [
-        Toast(text: "Toast 1"),
-        Toast(text: "Toast 2")
+        Toast(text: "Toast 1", intent: .notify),
+        Toast(text: "Toast 2", intent: .notify),
       ]
     )
     let view = DemoView()

@@ -18,7 +18,7 @@ struct ToasterView: View {
       ForEach(toaster.toasts, id: \.self) { toast in
           ToastView(
             text: toast.text,
-            symbolName: toast.symbol.rawValue,
+            symbolName: toast.symbolName,
             removal: { toaster.removeToast(toastID: toast.id) }
           )
           .offset(x: 0, y: 0)
@@ -35,8 +35,8 @@ struct ToasterView_Previews: PreviewProvider {
   static var previews: some View {
     let toaster = Toaster(
       toasts: [
-        Toast(text: "Toast 1"),
-        Toast(text: "Toast 2")
+        Toast(text: "Toast 1", intent: .notify),
+        Toast(text: "Toast 2", intent: .notify)
       ]
     )
     let view = ToasterView()

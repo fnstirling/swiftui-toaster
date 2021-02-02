@@ -49,7 +49,7 @@ struct ToastView: View {
 struct ToastView_Previews: PreviewProvider {
   static var previews: some View {
     let text = "This is a toast. This toast has alot of text that will go over 2 lines. But it won't go to 3 lines"
-    let symbolName = Toast.Symbol.bell.rawValue
+    let symbolName = ToastConfiguration.notifySymbolName
     let removal = {}
     let view = ToastView(text: text, symbolName: symbolName, removal: removal)
     
