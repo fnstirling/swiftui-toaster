@@ -25,6 +25,7 @@ struct ToastView: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: symbolWidth, height: symbolWidth)
+            .foregroundColor(symbolColor)
           Text(text)
             .font(.system(size: 16, weight: .medium))
             .frame(width: geometry.size.width - nonTextWidth, height: toastHeight, alignment: .leading)
@@ -35,9 +36,9 @@ struct ToastView: View {
         }
         .frame(width: geometry.size.width)
 
-        .background(Color(UIColor.systemBackground))
+        .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(12)
-        .shadow(color: Color(UIColor.systemFill), radius: 5, x: 0, y: 0)
+        .shadow(color: Color(UIColor.systemGroupedBackground), radius: 5, x: 0, y: 0)
       }
     }
     .frame(height: toastHeight, alignment: .top)

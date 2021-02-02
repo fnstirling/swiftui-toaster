@@ -60,6 +60,7 @@ struct ContentView_Previews: PreviewProvider {
       view
         .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
         .previewDisplayName("iPhone 11 Pro")
+        .background(Color(UIColor.systemBackground))
         .environment(\.colorScheme, .dark)
         .environmentObject(toaster)
     }
