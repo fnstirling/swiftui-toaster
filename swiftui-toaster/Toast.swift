@@ -1,7 +1,6 @@
 import SwiftUI
-import Combine
 
-final class Toast: ObservableObject {
+final class Toast {
   let id: UUID
   var text: String
   var intent: Toast.Intent

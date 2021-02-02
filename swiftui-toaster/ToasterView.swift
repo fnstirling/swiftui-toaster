@@ -21,7 +21,6 @@ struct ToasterView: View {
             symbolName: toast.symbol.rawValue,
             removal: { toaster.removeToast(toastID: toast.id) }
           )
-          // .offset(x: 0, y: currentOffset)
           .offset(x: 0, y: 0)
           .animation(animation)
           .transition(.toast)
