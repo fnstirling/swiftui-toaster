@@ -4,43 +4,42 @@ final class Toast {
   let id: UUID
   var text: String
   var intent: Toast.Intent
-  var symbol: Toast.Symbol
-  var color: Color
+  var symbolName: String
+  var symbolColor: Color
   
   init(
     text: String,
-    intent: Toast.Intent = .notify
+    intent: Toast.Intent
   ) {
     self.id = UUID()
     self.text = text
     self.intent = intent
     switch intent {
-    case .notify:
-      self.color = Color(UIColor.systemGray)
-      self.symbol = .notify
+    case .notify, .custom:
+      self.symbolName = ToastConfiguration.notifySymbolName
+      self.symbolColor = ToastConfiguration.notifySymbolColor
     case .danger:
-      self.color = .red
-      self.symbol = .danger
+      self.symbolName = ToastConfiguration.dangerSymbolName
+      self.symbolColor = ToastConfiguration.dangerSymbolColor
     case .warning:
-      self.color = .orange
-      self.symbol = .warning
+      self.symbolName = ToastConfiguration.warningSymbolName
+      self.symbolColor = ToastConfiguration.warningSymbolColor
     case .success:
-      self.color = .green
-      self.symbol = .success
+      self.symbolName = ToastConfiguration.successSymbolName
+      self.symbolColor = ToastConfiguration.successSymbolColor
     }
   }
   
   init(
     text: String,
-    intent: Toast.Intent,
-    symbol: Toast.Symbol,
-    color: Color
+    symbolName: String,
+    symbolColor: Color
   ) {
     self.id = UUID()
     self.text = text
-    self.intent = intent
-    self.symbol = symbol
-    self.color = color
+    self.intent = .custom
+    self.symbolName = symbolName
+    self.symbolColor = symbolColor
   }
   
   public enum Intent: String {
@@ -48,13 +47,7 @@ final class Toast {
     case danger
     case warning
     case success
-  }
-  
-  public enum Symbol: String {
-    case notify = "bell.circle.fill"
-    case danger = "xmark.circle.fill"
-    case warning = "exclamationmark.triangle.fill"
-    case success = "checkmark.circle.fill"
+    case custom
   }
 }
 

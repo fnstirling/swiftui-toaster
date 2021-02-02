@@ -18,7 +18,8 @@
 		EC113CE425C8CD2600AE4691 /* ToasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CE325C8CD2600AE4691 /* ToasterView.swift */; };
 		EC113CEC25C8E9A100AE4691 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CEB25C8E9A100AE4691 /* ToastView.swift */; };
 		EC113CFD25C9083100AE4691 /* AnyTransition+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113CFC25C9083100AE4691 /* AnyTransition+Toast.swift */; };
-		EC113D0B25C92E2700AE4691 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113D0A25C92E2700AE4691 /* ToastConfiguration.swift */; };
+		EC113D0B25C92E2700AE4691 /* ToastConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113D0A25C92E2700AE4691 /* ToastConfigurable.swift */; };
+		EC113D1325C9316A00AE4691 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC113D1225C9316A00AE4691 /* ToastConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,8 @@
 		EC113CE325C8CD2600AE4691 /* ToasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToasterView.swift; sourceTree = "<group>"; };
 		EC113CEB25C8E9A100AE4691 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		EC113CFC25C9083100AE4691 /* AnyTransition+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Toast.swift"; sourceTree = "<group>"; };
-		EC113D0A25C92E2700AE4691 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
+		EC113D0A25C92E2700AE4691 /* ToastConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfigurable.swift; sourceTree = "<group>"; };
+		EC113D1225C9316A00AE4691 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,8 @@
 				EC113C9B25C7E78C00AE4691 /* Assets.xcassets */,
 				EC113C9D25C7E78C00AE4691 /* Preview Content */,
 				EC113CFC25C9083100AE4691 /* AnyTransition+Toast.swift */,
-				EC113D0A25C92E2700AE4691 /* ToastConfiguration.swift */,
+				EC113D0A25C92E2700AE4691 /* ToastConfigurable.swift */,
+				EC113D1225C9316A00AE4691 /* ToastConfiguration.swift */,
 			);
 			path = "swiftui-toaster";
 			sourceTree = "<group>";
@@ -280,10 +283,11 @@
 				EC113C9A25C7E78800AE4691 /* DemoView.swift in Sources */,
 				EC113CEC25C8E9A100AE4691 /* ToastView.swift in Sources */,
 				EC113CCE25C8977E00AE4691 /* Toast.swift in Sources */,
+				EC113D1325C9316A00AE4691 /* ToastConfiguration.swift in Sources */,
 				EC113CDC25C8C94900AE4691 /* Toaster.swift in Sources */,
 				EC113C9825C7E78800AE4691 /* Application.swift in Sources */,
 				EC113CFD25C9083100AE4691 /* AnyTransition+Toast.swift in Sources */,
-				EC113D0B25C92E2700AE4691 /* ToastConfiguration.swift in Sources */,
+				EC113D0B25C92E2700AE4691 /* ToastConfigurable.swift in Sources */,
 				EC113CE425C8CD2600AE4691 /* ToasterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,14 @@
 import SwiftUI
 
-protocol ToastConfigurable {
-  // Colors
-  var notifySymbolColor: Color { get }
-  var dangerSymbolColor: Color { get }
-  var warningSymbolColor: Color { get }
-  var successSymbolColor: Color { get }
-  
-  // Symbold
-  var notifySymbolName: String { get }
-  var dangerSymbolName: String { get }
-  var warningSymbolName: String { get }
-  var successSymbolName: String { get }
+public struct ToastConfiguration: ToastConfigurable {
+  // Symbol colors
+  public static var notifySymbolColor: Color = Color(UIColor.systemGray)
+  public static var dangerSymbolColor: Color = .red
+  public static var warningSymbolColor: Color = .orange
+  public static var successSymbolColor: Color = .red
+  // Symbol names
+  public static var notifySymbolName: String = "bell.circle.fill"
+  public static var dangerSymbolName: String = "xmark.circle.fill"
+  public static var warningSymbolName: String = "exclamationmark.triangle.fill"
+  public static var successSymbolName: String = "checkmark.circle.fill"
 }
