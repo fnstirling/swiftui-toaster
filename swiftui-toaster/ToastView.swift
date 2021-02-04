@@ -49,7 +49,7 @@ struct ToastView: View {
             .foregroundColor(symbolColor)
           
           Text(text)
-            .font(.system(size: 16, weight: .semibold))
+            .font(.system(size: 14, weight: .semibold))
             .frame(width: geometry.size.width - nonTextWidth, height: toastHeight, alignment: .leading)
             .padding(.leading, textLeadingPadding)
             .lineLimit(2)
