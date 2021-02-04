@@ -60,7 +60,7 @@ struct ToastView: View {
         
         .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(12)
-        .shadow(color: Color(UIColor.systemGroupedBackground), radius: 5, x: 0, y: 0)
+        // .shadow(color: Color(UIColor.systemGroupedBackground), radius: 5, x: 0, y: 0)
       }
     }
     .frame(height: toastHeight, alignment: .top)
