@@ -2,16 +2,17 @@ import SwiftUI
 import Combine
 
 final class Toaster: ObservableObject {
-  @Published var toasts: [Toast]
+  @Published var toasts: [Toast] = []
   
-  init(
-    toasts: [Toast] = []
-  ) {
-    self.toasts = toasts
-  }
+  // Singleton
+  static let shared = Toaster()
+  
+  // Pirvate so it can't be instantiated because of singleton
+  private init() {}
   
   /// Add a toast to toasts on the main thread.
   /// Added to the begining of the array so that that the most recent toast appearas at the top of the screen, i.e. first position
+  /// - Parameter toast: A single toast
   func addToast(toast: Toast) {
     DispatchQueue.main.async {
       self.toasts.insert(toast, at: 0)

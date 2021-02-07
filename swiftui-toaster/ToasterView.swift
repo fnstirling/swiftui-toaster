@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ToasterView: View {
-  @EnvironmentObject var toaster: Toaster
+  @ObservedObject var toaster: Toaster = Toaster.shared
   private let animation: Animation = Animation.easeOut(duration: 0.3)
   private var screenSize: CGSize {
     #if os(iOS) || os(tvOS)
@@ -34,12 +34,6 @@ struct ToasterView: View {
 
 struct ToasterView_Previews: PreviewProvider {
   static var previews: some View {
-    let toaster = Toaster(
-      toasts: [
-        Toast(text: "Toast 1", intent: .notify),
-        Toast(text: "Toast 2", intent: .notify)
-      ]
-    )
     let view = ToasterView()
     
     Group {
@@ -47,14 +41,12 @@ struct ToasterView_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
         .previewDisplayName("iPhone 11 Pro")
         .environment(\.colorScheme, .light)
-        .environmentObject(toaster)
       
       view
         .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
         .previewDisplayName("iPhone 11 Pro")
         .background(Color(UIColor.systemBackground))
         .environment(\.colorScheme, .dark)
-        .environmentObject(toaster)
     }
   }
 }

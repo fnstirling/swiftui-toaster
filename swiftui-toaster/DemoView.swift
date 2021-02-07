@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct DemoView: View {
-  @EnvironmentObject var toaster: Toaster
+  @ObservedObject var toaster: Toaster = Toaster.shared
   @State var disabled: Bool = false
   
   var body: some View {
@@ -91,12 +91,6 @@ struct DemoButton: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    let toaster = Toaster(
-      toasts: [
-        Toast(text: "Toast 1", intent: .notify),
-        Toast(text: "Toast 2", intent: .notify),
-      ]
-    )
     let view = DemoView()
     
     Group {
@@ -104,14 +98,12 @@ struct ContentView_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
         .previewDisplayName("iPhone 11 Pro")
         .environment(\.colorScheme, .light)
-        .environmentObject(toaster)
       
       view
         .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
         .previewDisplayName("iPhone 11 Pro")
         .background(Color(UIColor.systemBackground))
         .environment(\.colorScheme, .dark)
-        .environmentObject(toaster)
     }
   }
 }
