@@ -1,6 +1,7 @@
 import SwiftUI
 
 extension AnyTransition {
+  /// Fade and slide in and out transition for a Toast
   static var toast: AnyTransition {
     let insertion = AnyTransition
       .move(edge: .top)
