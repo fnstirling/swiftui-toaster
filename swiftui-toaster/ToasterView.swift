@@ -1,7 +1,9 @@
 import SwiftUI
 
+/// A view to hold all the toasts
 struct ToasterView: View {
   @ObservedObject var toaster: Toaster = Toaster.shared
+  var isViewedOnSheet: Bool = false
   private let animation: Animation = Animation.easeOut(duration: 0.3)
   private var screenSize: CGSize {
     #if os(iOS) || os(tvOS)
@@ -29,6 +31,7 @@ struct ToasterView: View {
       Spacer()
     }
     .padding(.horizontal, 10)
+    .padding(.vertical, isViewedOnSheet ? 10 : 0)
   }
 }
 

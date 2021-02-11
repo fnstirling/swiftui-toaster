@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Protocol for the toast configuration
 protocol ToastConfigurable {
   // Symbol name
   static var notifySymbolName: String { get }

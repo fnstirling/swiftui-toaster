@@ -1,17 +1,19 @@
 import SwiftUI
 import Combine
 
+/// Stores all toasts currently visible to user
+///
+/// Is a singleton to ensure only one Toaster globally lives
 final class Toaster: ObservableObject {
+  static let shared = Toaster()
   @Published var toasts: [Toast] = []
   
-  // Singleton
-  static let shared = Toaster()
-  
-  // Pirvate so it can't be instantiated because of singleton
   private init() {}
   
-  /// Add a toast to toasts on the main thread.
+  /// Add a toast to a collection on the main thread.
+  ///
   /// Added to the begining of the array so that that the most recent toast appearas at the top of the screen, i.e. first position
+  ///
   /// - Parameter toast: A single toast
   func addToast(toast: Toast) {
     DispatchQueue.main.async {

@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// An individual toast to display to the user
 final class Toast {
   let id: UUID
   var text: String

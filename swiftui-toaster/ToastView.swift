@@ -1,14 +1,13 @@
 import SwiftUI
 
+/// A view for an individual toast
 struct ToastView: View {
-  // MARK: Properties
   var text: String
   var symbolName: String
   var symbolColor: Color
   var removal: () -> Void
   var work: DispatchWorkItem? // Store the removal in a work item so can be cancelled if tapped to remove
   
-  // MARK: Default Properties
   var verticalSpacing: CGFloat = 15
   var singleHorizontalSpacing: CGFloat = 40
   var symbolWidth: CGFloat = 22
@@ -17,7 +16,6 @@ struct ToastView: View {
   var toastHeight: CGFloat = 60
   var duration: Int = 3000
   
-  // MARK: Initializers
   init(
     text: String,
     symbolName: String,
@@ -35,7 +33,6 @@ struct ToastView: View {
     }
   }
   
-  // MARK: Body
   var body: some View {
     GeometryReader { geometry in
       HStack {
@@ -57,7 +54,10 @@ struct ToastView: View {
           Spacer().frame(width: singleHorizontalSpacing, height: toastHeight)
         }
         .frame(width: geometry.size.width)
-        
+        .overlay(
+          RoundedRectangle(cornerRadius: 12)
+            .stroke(Color(UIColor.systemFill), lineWidth: 1)
+        )
         .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(12)
         // .shadow(color: Color(UIColor.systemGroupedBackground), radius: 5, x: 0, y: 0)

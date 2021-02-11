@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Configuration for a toast
 public struct ToastConfiguration: ToastConfigurable {
   // Symbol names
   public static var notifySymbolName: String = "bell.circle.fill"
