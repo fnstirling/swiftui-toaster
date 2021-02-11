@@ -63,3 +63,16 @@ extension Toast: Hashable {
     return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
   }
 }
+
+// MARK: - Helper methods
+extension Toast {
+  /// Create a danger toast
+  public static func createDangerToast(_ text: String) -> Toast {
+    return Toast(text: text, intent: .danger)
+  }
+  
+  /// Create a success toast
+  public static func createSuccessToast(_ text: String) -> Toast {
+    return Toast(text: text, intent: .success)
+  }
+}
